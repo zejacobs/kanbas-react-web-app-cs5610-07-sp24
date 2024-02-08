@@ -1,29 +1,83 @@
-<h2>Course Status</h2>
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <button>Unpublish</button>
-      </td>
-      <td>
-        <button>Publish</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<ul>
-  <li><a href="#">Import Existing Content</a></li>
-  <li><a href="#">Import From Commons</a></li>
-  <li><a href="#">Choose From Home Page</a></li>
-  <li><a href="#">View Course Stream</a></li>
-  <li><a href="#">New Announcement</a></li>
-  <li><a href="#">New Analytics</a></li>
-  <li><a href="#">View Course Notifications</a></li>
-</ul>
-<h2>Comming Up</h2>
-<a href="#">View Calendar</a><br />
-<ul>
-  <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-  <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-  <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-</ul>
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/Status/index.css" />
+  </head>
+  <body class="wd-course-status">
+    Course Status <br />
+    <div class="row">
+      <div class="col pe-0 m-0">
+        <button class="btn btn-light border w-100"><i class="fa fa-ban"></i> Unpublish</button>
+      </div>
+      <div class="col ps-0 m-0">
+        <button class="btn btn-success wd-100"><i class="fa fa-check-circle"></i> Publish</button>
+      </div>
+    </div>
+    <br />
+    <div class="wd-course-status">
+      <ul>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-file-o"></i> Import Existing Content</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-arrow-circle-o-right"></i> Import From Commons</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-dot-circle-o"></i> Choose From Home Page</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-bar-chart"></i> View Course Stream</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-bullhorn"></i> New Announcement</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-bar-chart"></i> New Analytics</a>
+        </li>
+        <li>
+          <a href="#" class="btn btn-light border w-100" role="button"><i class="fa fa-bell-o"></i> View Course Notifications</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="wd-course-status-upcoming">
+        To Do
+        <hr />
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-info-circle"></i> Grade A1 - ENV + HTML Sep 19 at 11:59pm</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" style="align-items: baseline">
+      <div class="col">Comming Up</div>
+      <div class="col wd-course-status-upcoming">
+        <div class="float-end"><i class="fa fa-calendar-o"></i><a href="#"> View Calendar</a></div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="wd-course-status-upcoming">
+      <ul>
+        <li>
+          <i class="fa fa-calendar-o"></i>
+          <a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a>
+        </li>
+        <li>
+          <i class="fa fa-calendar-o"></i>
+          <a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a>
+        </li>
+        <li>
+          <i class="fa fa-calendar-o"></i>
+          <a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

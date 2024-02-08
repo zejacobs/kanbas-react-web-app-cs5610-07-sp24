@@ -1,36 +1,130 @@
-<button>Collapse All</button>
-<button>Expand All</button>
-<button>View Progress</button>
-<select>
-  <option>Publish All</option>
-  <option>Unpublish All</option>
-  <option>Unpublish All</option>
-</select>
-<button>+ Module</button>
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col">
+        <span class="float-end">
+          <button class="btn btn-light border">Collapse All</button>
+          <button class="btn btn-light border">Expand All</button>
+          <button class="btn btn-light border">View Progress</button>
+          <select class="btn btn-light border">
+            <!--Figure out how to get the check in <i class="fa fa-check-circle-o text-success"></i>-->
+            <option>Publish All</option>
+            <option>Unpublish All</option>
+            <option>Unpublish All</option>
+          </select>
+          <button class="btn btn-danger">+ Module</button>
+          <button class="btn btn-light border"><i class="fa fa-ellipsis-v"></i></button>
+        </span>
+      </div>
+    </div>
+    <hr />
 
-<ul>
-  <li>
-    Week 1
-    <ul>
-      <li>Learning Objectives</li>
-      <li>Introduction to the course</li>
-      <li>Learn what is Web Development</li>
+    <ul class="list-group wd-modules">
+      <li class="list-group-item">
+        <div>
+          <i class="fa fa-ellipsis-v"></i> Week 1
+          <span class="float-end">
+            <i class="fa fa-check-circle text-success"></i>
+            <i class="fa fa-plus ms-2"></i>
+            <i class="fa fa-ellipsis-v ms-2"></i>
+          </span>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Learning Objectives
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Introduction to the course
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Learn what is Web Development
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <div>
+          <i class="fa fa-ellipsis-v"></i> Week 2
+          <span class="float-end">
+            <i class="fa fa-check-circle text-success"></i>
+            <i class="fa fa-plus ms-2"></i>
+            <i class="fa fa-ellipsis-v ms-2"></i>
+          </span>
+        </div>
+        <ul>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Learning Objectives
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> HTML
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Building a React Web App
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <div>
+          <i class="fa fa-ellipsis-v"></i> Week 3
+          <span class="float-end">
+            <i class="fa fa-check-circle text-success"></i>
+            <i class="fa fa-plus ms-2"></i>
+            <i class="fa fa-ellipsis-v ms-2"></i>
+          </span>
+        </div>
+        <ul>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> CSS
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Deploying Web App on Netlify
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+          <li class="list-group-item">
+            <i class="fa fa-ellipsis-v"></i> Building a React Web App
+            <span class="float-end">
+              <i class="fa fa-check-circle text-success"></i>
+              <i class="fa fa-ellipsis-v ms-2"></i>
+            </span>
+          </li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li>
-    Week 2
-    <ul>
-      <li>Learning Objectives</li>
-      <li>HTML</li>
-      <li>Building a React Web App</li>
-    </ul>
-  </li>
-  <li>
-    Week 3
-    <ul>
-      <li>Learning Objectives</li>
-      <li>CSS</li>
-      <li>Deploying Web App on Netlify</li>
-    </ul>
-  </li>
-</ul>
+  </body>
+</html>

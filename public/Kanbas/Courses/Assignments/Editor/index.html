@@ -1,69 +1,148 @@
-<select name="" id="">
-  <option value="">SpeedGrader</option>
-</select>
-<hr />
-<label for="wd-assignment-name"><h2>Assignment Name</h2></label>
-<input value="A1" id="wd-assignment-name" /><br /><br />
-<textarea name="" id="" cols="60" rows="10">
+<html>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Assignments/Editor/index.css" />
+  </head>
+  <body>
+    <nav aria-label="breadcrumb breadcrumb-divider: quote('>');">
+      <ol class="breadcrumb mt-3">
+        <li class="breadcrumb-item"><i class="fa fa-bars me-2"></i>CS5610_Sp2024_Sec07</li>
+        <li class="breadcrumb-item">Assignments</li>
+        <li class="breadcrumb-item active" aria-current="page">A1 - ENV + HTML</li>
+      </ol>
+    </nav>
+    <hr />
+    <div class="row">
+      <div class="col">
+        <span class="wd-published float-end"
+          ><i class="fa fa-check-circle"></i> Published <button class="btn btn-light border ms-2"><i class="fa fa-ellipsis-v"></i></button
+        ></span>
+      </div>
+    </div>
+    <hr />
+    <label for="wd-assignment-name"><h2>Assignment Name</h2></label>
+    <input class="form-control" value="A1 - ENV + HTML" id="wd-assignment-name" /><br />
+    <textarea class="form-control" id="" cols="60" rows="5d">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a aliquam leo. Curabitur id velit augue. Phasellus dolor nulla, luctus sit amet lacus sed, vestibulum dictum ex. Maecenas id feugiat felis. Vivamus dignissim imperdiet tristique. Donec molestie, turpis at mattis vestibulum, nibh leo aliquam lorem, at venenatis augue lacus in enim. In hac habitasse platea dictumst. Donec eget libero in neque feugiat porta. Maecenas efficitur suscipit nibh, vitae hendrerit metus pretium id. Mauris cursus est accumsan mollis consequat. Praesent ac scelerisque neque. Morbi est augue, blandit nec sem non, hendrerit iaculis ante.</textarea
->
-<br /><br />
-<table>
-  <tbody>
-    <tr>
-      <td valign="top">Points</td>
-      <td><input type="number" value="100" min="0" max="100" /><br /><br /></td>
-    </tr>
-    <tr>
-      <td valign="top">Assignment Group</td>
-      <td>
-        <select name="" id="">
+    >
+    <br />
+    <div class="row">
+      <div class="col-3"><label class="float-end" for="wd-points">Points</label></div>
+      <div class="col-6"><input id="wd-points" class="form-control" type="number" value="100" min="0" max="100" /></div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-3"><label class="float-end" for="wd-assignment-group">Assignment Group</label></div>
+      <div class="col-6">
+        <select class="form-control" name="" id="wd-assignment-group">
           <option value="">Assignments</option>
           <option value="">Quizzes</option>
           <option value="">Exams</option>
-          <option value="">Projects</option></select
-        ><br /><br />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">Display Grade as</td>
-      <td>
-        <select name="" id="">
-          <option value="">Percentage</option></select
-        ><br /><br />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">Submission Type</td>
-      <td>
-        <select name="" id="">
-          <option value="">Online</option></select
-        ><br />
-        <label for="">Online Entry Options</label><br />
-        <input type="checkbox" name="wd-text-entry" id="wd-text-entry" />
-        <label for="wd-text-entry">Text Entry</label><br />
-        <input type="checkbox" name="wd-website-url" id="wd-website-url" />
-        <label for="wd-website-url">Website URL</label><br />
-        <input type="checkbox" name="wd-media-recordings" id="wd-media-recordings" />
-        <label for="wd-media-recordings">Media Recordings</label><br />
-        <input type="checkbox" name="wd-student-annotations" id="wd-student-annotations" />
-        <label for="wd-student-annotations">Student Annotations</label><br />
-        <input type="checkbox" name="wd-file-uploads" id="wd-file-uploads" />
-        <label for="wd-file-uploads">File Uploads</label><br /><br />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">Assign</td>
-      <td>
-        <label for="wd-assign-to">Assign to</label><br />
-        <input type="text" value="Everyone" name="wd-assign-to" id="wd-assign-to" /><br />
-        <label for="wd-due-date">Due</label><br />
-        <input type="date" value="2024-01-25" name="wd-due-date" id="wd-due-date" /><br />
-        <label for="wd-available-date">Available from</label><br />
-        <input type="date" value="2024-01-25" name="wd-available-date" id="wd-available-date" /><br />
-        <label for="wd-until-date">Until</label><br />
-        <input type="date" value="2024-01-25" name="wd-until-date" id="wd-until-date" /><br /><br />
-      </td>
-    </tr>
-  </tbody>
-</table>
+          <option value="">Projects</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-3"><label class="float-end" for="wd-display-grade">Display Grade as</label></div>
+      <div class="col-6">
+        <select class="form-control" name="" id="wd-display-grade">
+          <option value="">Percentage</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <input class="me-2" type="checkbox" id="wd-do-not-count" />
+        <label for="wd-do-not-count">Do not count this assignment towards the final grade</label>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-3"><label class="float-end" for="wd-display-grade">Assign</label></div>
+      <div class="col-6">
+        <div class="row border p-3">
+          <label for="wd-assign-to">Assign to</label><br />
+          <input class="form-control" type="text" value="Everyone" name="wd-assign-to" id="wd-assign-to" />
+          <label class="pt-2" for="wd-due-date">Due</label><br />
+          <input class="form-control" type="date" value="2024-01-25" name="wd-due-date" id="wd-due-date" />
+          <div class="col ps-0 pe-1 pt-2">
+            <label for="wd-available-date">Available from</label><br />
+            <input class="form-control" type="date" value="2024-01-25" name="wd-available-date" id="wd-available-date" />
+          </div>
+          <div class="col pe-0 ps-1 pt-2">
+            <label for="wd-until-date">Until</label><br />
+            <input class="form-control" type="date" value="2024-01-25" name="wd-until-date" id="wd-until-date" />
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn btn-light border rounded-0 w-100">+ Add</button>
+        </div>
+      </div>
+    </div>
+    <!--
+    <table>
+      <tbody>
+        <tr>
+          <td valign="top">Points</td>
+          <td><input type="number" value="100" min="0" max="100" /><br /><br /></td>
+        </tr>
+        <tr>
+          <td valign="top">Assignment Group</td>
+          <td>
+            <select name="" id="">
+              <option value="">Assignments</option>
+              <option value="">Quizzes</option>
+              <option value="">Exams</option>
+              <option value="">Projects</option></select
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Display Grade as</td>
+          <td>
+            <select name="" id="">
+              <option value="">Percentage</option></select
+            ><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Submission Type</td>
+          <td>
+            <select name="" id="">
+              <option value="">Online</option></select
+            ><br />
+            <label for="">Online Entry Options</label><br />
+            <input type="checkbox" name="wd-text-entry" id="wd-text-entry" />
+            <label for="wd-text-entry">Text Entry</label><br />
+            <input type="checkbox" name="wd-website-url" id="wd-website-url" />
+            <label for="wd-website-url">Website URL</label><br />
+            <input type="checkbox" name="wd-media-recordings" id="wd-media-recordings" />
+            <label for="wd-media-recordings">Media Recordings</label><br />
+            <input type="checkbox" name="wd-student-annotations" id="wd-student-annotations" />
+            <label for="wd-student-annotations">Student Annotations</label><br />
+            <input type="checkbox" name="wd-file-uploads" id="wd-file-uploads" />
+            <label for="wd-file-uploads">File Uploads</label><br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Assign</td>
+          <td>
+            <label for="wd-assign-to">Assign to</label><br />
+            <input type="text" value="Everyone" name="wd-assign-to" id="wd-assign-to" /><br />
+            <label for="wd-due-date">Due</label><br />
+            <input type="date" value="2024-01-25" name="wd-due-date" id="wd-due-date" /><br />
+            <label for="wd-available-date">Available from</label><br />
+            <input type="date" value="2024-01-25" name="wd-available-date" id="wd-available-date" /><br />
+            <label for="wd-until-date">Until</label><br />
+            <input type="date" value="2024-01-25" name="wd-until-date" id="wd-until-date" /><br /><br />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  --></body>
+</html>
