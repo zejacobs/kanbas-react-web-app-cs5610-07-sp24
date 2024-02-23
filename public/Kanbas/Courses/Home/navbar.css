@@ -1,0 +1,19 @@
+.kanbasnav-dropdown {
+  padding-inline: 20px;
+}
+
+.kanbasnav-dropdown * {
+  color: red;
+}
+
+.kanbasnav-dropdown > li button {
+  color: black;
+}
+
+.kanbasnav-dropdown a {
+  text-decoration: none;
+}
+
+.kanbasnav-dropdown #account-icon {
+  color: grey;
+}
