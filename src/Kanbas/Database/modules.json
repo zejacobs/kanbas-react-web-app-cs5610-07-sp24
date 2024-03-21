@@ -1,6 +1,6 @@
 [
   {
-    "_id": "M101",
+    "_id": "CS1234_M101",
     "name": "Week 1 - Introduction",
     "description": "Basic principles of rocket propulsion and rocket engines.",
     "course": "CS1234",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "_id": "M102",
+    "_id": "CS1234_M102",
     "name": "Week 2 - HTML",
     "description": "Understanding rocket fuel, combustion processes, and efficiency.",
     "course": "CS1234",
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "_id": "M103",
+    "_id": "CS1234_M103",
     "name": "Week 3 - CSS",
     "description": "Principles of rocket nozzle design and performance optimization.",
     "course": "CS1234",
@@ -79,7 +79,7 @@
   },
 
   {
-    "_id": "M101",
+    "_id": "CS5800_M101",
     "name": "Week 1 - Introduction",
     "description": "Basic principles of rocket propulsion and rocket engines.",
     "course": "CS5800",
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "_id": "M102",
+    "_id": "CS5800_M102",
     "name": "Week 2 - Big O Notation",
     "description": "Understanding rocket fuel, combustion processes, and efficiency.",
     "course": "CS5800",
@@ -131,7 +131,7 @@
     ]
   },
   {
-    "_id": "M103",
+    "_id": "CS5800_M103",
     "name": "Week 3 - Sorting Algorithms",
     "description": "Principles of rocket nozzle design and performance optimization.",
     "course": "CS5800",
@@ -158,7 +158,7 @@
   },
 
   {
-    "_id": "M101",
+    "_id": "CS5500_M101",
     "name": "Week 1 - Introduction",
     "description": "Basic principles of rocket propulsion and rocket engines.",
     "course": "CS5500",
@@ -184,7 +184,7 @@
     ]
   },
   {
-    "_id": "M102",
+    "_id": "CS5500_M102",
     "name": "Week 2 - Programming Paradigms",
     "description": "Understanding rocket fuel, combustion processes, and efficiency.",
     "course": "CS5500",
@@ -210,8 +210,8 @@
     ]
   },
   {
-    "_id": "M103",
-    "name": "Software Development Methodologies",
+    "_id": "CS5500_M103",
+    "name": "Week 3 - Software Development Methodologies",
     "description": "Principles of rocket nozzle design and performance optimization.",
     "course": "CS5500",
     "lessons": [

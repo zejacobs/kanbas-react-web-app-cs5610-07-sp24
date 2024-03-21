@@ -55,7 +55,7 @@ function Grades() {
           <thead className="border">
             <th>Student Name</th>
             {as.map((assignment) => (
-              <th>{assignment.title}</th>
+              <th>{assignment.name}</th>
             ))}
           </thead>
           <tbody>
