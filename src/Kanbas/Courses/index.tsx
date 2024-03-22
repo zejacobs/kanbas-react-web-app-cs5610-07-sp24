@@ -8,12 +8,16 @@ import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import Breadcrumb from "./Breadcrumb";
 
-function Courses() {
+function Courses({ courses }: { courses: any[] }) {
   console.log(useLocation());
+
+  const { courseId, assignmentId } = useParams();
+  const course = courses.find((course) => course._id === courseId);
+
   return (
     <>
       <div className="d-flex flex-column">
-        <Breadcrumb />
+        <Breadcrumb course={course} />
         <div className="d-flex" style={{ gap: "20px" }}>
           <CourseNavigation />
           <Routes>

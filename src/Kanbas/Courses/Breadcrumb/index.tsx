@@ -1,11 +1,11 @@
 import { FaBars } from "react-icons/fa";
 import { useLocation, useParams } from "react-router-dom";
-import { courses } from "../../Database";
+//import { courses } from "../../Database";
 
-function Breadcrumb() {
+function Breadcrumb({ course }: { course: any }) {
   const { courseId, assignmentId } = useParams();
-  console.log(courseId, assignmentId);
-  const course = courses.find((course) => course._id === courseId);
+  console.log(course, assignmentId);
+  //const course = courses.find((course) => course._id === courseId);
   const { pathname } = useLocation();
 
   return (

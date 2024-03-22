@@ -50,4 +50,5 @@
 
 #module-buttons * {
   margin: 2px;
+  border: rounded;
 }
