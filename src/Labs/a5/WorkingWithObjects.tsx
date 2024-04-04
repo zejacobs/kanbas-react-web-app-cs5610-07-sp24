@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function WorkingWithObjects() {
   const [assignment, setAssignment] = useState({
     id: 1,
@@ -16,8 +18,8 @@ function WorkingWithObjects() {
     description: "I am a module",
     course: "CS1234",
   });
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
-  const MODULE_URL = "http://localhost:4000/a5/module";
+  const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
+  const MODULE_URL = `${API_BASE}/a5/module`;
 
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
@@ -31,13 +33,15 @@ function WorkingWithObjects() {
     fetchAssignment();
   }, []);
 
+  const getAssignmentURL = `${API_BASE}/a5/assignment`;
+  const getTitleURL = `${API_BASE}/a5/assignment/title`;
   return (
     <div>
       <h3>Working With Objects</h3>
       <h4>Retrieving Objects</h4>
-      <a href="http://localhost:4000/a5/assignment">Get Assignment</a>
+      <a href={getAssignmentURL}>Get Assignment</a>
       <h4>Retrieving Properties</h4>
-      <a href="http://localhost:4000/a5/assignment/title">Get Title</a>
+      <a href={getTitleURL}>Get Title</a>
       <h3>Modifying Properties</h3>
       <input
         onChange={(e) =>

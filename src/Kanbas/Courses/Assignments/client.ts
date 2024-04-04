@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const ASSIGNMENTS_API = "http://localhost:4000/api/assignments";
+const API_BASE = process.env.REACT_APP_API_BASE;
+
+const ASSIGNMENTS_API = `${API_BASE}/api/assignments`;
 export const deleteAssignment = async (assignmentId: any) => {
   const response = await axios.delete(`${ASSIGNMENTS_API}/${assignmentId}`);
   return response.data;
