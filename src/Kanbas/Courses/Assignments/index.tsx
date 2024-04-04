@@ -1,13 +1,16 @@
-import React from "react";
+//import React from "react";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 //import { assignments } from "../../Database";
 //From a4
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, deleteAssignment, updateAssignment, setAssignment } from "./assignmentsReducer";
+import { addAssignment, deleteAssignment, updateAssignment, setAssignment, setAssignments } from "./assignmentsReducer";
 import { KanbasState } from "../../store";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css";
+// From a5
+import React, { useEffect, useState } from "react";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -15,9 +18,19 @@ function Assignments() {
   //const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
   const linkStyle = { "text-decoration": "none", color: "black", "font-weight": "bold", "background-color": "white" };
 
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId).then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
+
   const assignmentList = useSelector((state: KanbasState) => state.assignmentsReducer.assignments);
   const assignment = useSelector((state: KanbasState) => state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
+
+  const handleDeleteAssignment = (assignmentId: string) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
 
   const confirmDelete = (assignment: any) => {
     confirmAlert({
@@ -26,7 +39,7 @@ function Assignments() {
       buttons: [
         {
           label: "Yes",
-          onClick: () => dispatch(deleteAssignment(assignment._id)),
+          onClick: () => handleDeleteAssignment(assignment._id),
         },
         {
           label: "No",
@@ -40,6 +53,7 @@ function Assignments() {
       name: "New Assignment",
       description: "New Assignment Description",
       points: "100",
+      course: courseId,
     };
     dispatch(setAssignment(assignmentDefaults));
     navigate(`/Kanbas/Courses/${courseId}/Assignments/*`);
