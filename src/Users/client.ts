@@ -28,11 +28,8 @@ export const signout = async () => {
 };
 
 export const getCurrentUser = async () => {
-  const response = await axios.get(`${USERS_API}/currentUser`);
-  if (!Object.keys(response).length) {
-    return response.data;
-  }
-  return false;
+  const response = await axios.get(`${USERS_API}/currentuser`);
+  return response.data;
 };
 
 export const profile = async () => {

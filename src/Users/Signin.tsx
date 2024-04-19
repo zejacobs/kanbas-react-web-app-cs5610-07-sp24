@@ -2,27 +2,18 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { User } from "./client";
 import * as client from "./client";
+import { useDispatch, useSelector } from "react-redux";
+import { KanbasState } from "../Kanbas/store";
+import { setUser, clearUser } from "./reducer";
 
 export default function Signin() {
-  /*
-  // Check if user is already signed in
-  const checkIfLoggedIn = async () => {
-    const currUser = await client.getCurrentUser();
-
-    if (currUser) {
-      navigate("/Kanbas/Account/Profile");
-    }
-  };
-  useEffect(() => {
-    checkIfLoggedIn();
-  }, []);
-  */
-  const [credentials, setCredentials] = useState<User>({ _id: "", username: "", password: "", firstName: "", lastName: "", role: "USER" });
   const navigate = useNavigate();
+  const [credentials, setCredentials] = useState<User>({ _id: "", username: "", password: "", firstName: "", lastName: "", role: "USER" });
   const signin = async () => {
     await client.signin(credentials);
     navigate("/Kanbas/Account/Profile");
   };
+
   return (
     <div>
       <h1>Signin</h1>

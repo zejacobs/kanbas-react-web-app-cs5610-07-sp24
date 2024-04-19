@@ -1,6 +1,8 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { KanbasState } from "../Kanbas/store";
 
 export default function Profile() {
   const [profile, setProfile] = useState({ username: "", password: "", firstName: "", lastName: "", dob: "", email: "", role: "USER" });
