@@ -19,7 +19,7 @@ function Courses(/*{ courses }: { courses: any[] }*/) {
   const { courseId } = useParams();
   //const course = courses.find((course) => course._id === courseId);
   const COURSES_API = `${API_BASE}/api/courses`;
-  const [course, setCourse] = useState<any>({ _id: "" });
+  const [course, setCourse] = useState<any>({ id: "" });
   const findCourseById = async (courseId?: string) => {
     const response = await axios.get(`${COURSES_API}/${courseId}`);
     setCourse(response.data);

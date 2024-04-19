@@ -41,13 +41,13 @@ function Dashboard({
           {courses.map((course) => (
             <div key={course._id} className="col" style={{ width: 300 }}>
               <div className="card">
-                <img src={`/images/${course.image}`} className="card-img-top" style={{ height: 150 }} />
+                <img src={course.image ? `/images/${course.image}` : "/images/reactjs.jpg"} className="card-img-top" style={{ height: 150 }} />
                 <div className="card-body">
-                  <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`} style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+                  <Link className="card-title" to={`/Kanbas/Courses/${course.id}/Home`} style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name}{" "}
                   </Link>
-                  <p className="card-text">{course.number}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-success">
+                  <p className="card-text">{course.id}</p>
+                  <Link to={`/Kanbas/Courses/${course.id}/Home`} className="btn btn-success">
                     Go{" "}
                   </Link>
                   <span className="float-end">
